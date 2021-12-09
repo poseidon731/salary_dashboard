@@ -53,7 +53,7 @@ async function getDataForAddress(address) {
   return {
     accountInfo: accountInfo,
     balance: balance,
-    totalPaidUSDT: totalPaidUSDT,
+    totalPaidUSDT: totalPaidUSDT ? totalPaidUSDT : 0
   };
 }
 
