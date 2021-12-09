@@ -1,8 +1,4 @@
 {
     "provider": "https://bsc-dataseed.binance.org",
-    "id": "salary",
-    "cakeId": "tether",
-    "currency": "usd",
-    "contractAddress": "0xc24796458fbea043780eea59ebba4ad40e87c29b",
-    "distributorAddress": "0x2F8659e8AE562Ae92E6E3E275a122BE20Ec7e234"
+    "contractAddress": "0xc24796458fbea043780eea59ebba4ad40e87c29b"
 }

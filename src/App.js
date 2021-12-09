@@ -3,17 +3,19 @@ import getDataForAddress from "./modules/getDataForAddress";
 import "./App.css";
 
 function App() {
+  const [address, setAddress] = useState();
   const [balance, setBalance] = useState();
   const [paidUSDT, setPaidUSDT] = useState();
   const [pendingUSDT, setPendingUSDT] = useState();
+  const [totalPaidUSDT, setTotalPaidUSDT] = useState();
   const [loading, setLoding] = useState(true);
-  const [address, setAddress] = useState();
 
   const getData = async (address) => {
     const data = await getDataForAddress(address);
     setBalance(data.balance.toFixed(2));
-    setPaidUSDT(data.addressInfo.paidUSDT.toFixed(5));
-    setPendingUSDT(data.addressInfo.pendingUSDT.toFixed(5));
+    setPaidUSDT(data.accountInfo.paidUSDT.toFixed(5));
+    setPendingUSDT(data.accountInfo.pendingUSDT.toFixed(5));
+    setTotalPaidUSDT(data.totalPaidUSDT.toFixed(5))
     if (data) {
       setLoding(false);
     }
@@ -73,7 +75,7 @@ function App() {
               Total Paid USDT to all Holders
             </h2>
             <p className="data-value text-center">
-              {loading ? "....." : "....."}
+              {loading ? "....." : totalPaidUSDT + " USDT"}
             </p>
           </div>
         </div>
