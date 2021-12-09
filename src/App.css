@@ -6,17 +6,19 @@
 
 .dashboard-title {
   border-bottom: 1px solid white;
+  font-size: 38px;
+  font-weight: 500;
 }
 
 .data-panel {
-  width: 80%;
+  width: 90%;
   max-width: 800px;
   border: 1px solid #3cb7b0;
   border-radius: 3px;
 }
 
 .input-address {
-  width: 80%;
+  width: 90%;
   max-width: 800px;
   background-color: transparent;
   border: 1px solid #3cb7b0;
@@ -56,4 +58,19 @@
 
 .data-field-span:first-child {
   border-right: 1px solid #3cb7b0;
+}
+
+@media (max-width: 425px) {
+  .dashboard-title {
+    font-size: 30px;
+  }
+  .data-title {
+    font-size: 24px;
+  }
+  .data-value {
+    font-size: 18px;
+  }
+  .input-address {
+    font-size: 18px;
+  }
 }

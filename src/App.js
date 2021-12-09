@@ -49,7 +49,7 @@ function App() {
           onKeyPress={(e) => handleAddress(e)}
           placeholder="Please enter your address..."
         />
-        <div className="data-panel mx-auto p-4 pb-0">
+        <div className="data-panel mx-auto px-4">
           <div className="data-field py-2">
             <h2 className="data-title text-center">Your SLR Holdings</h2>
             <p className="data-value text-center">
@@ -59,17 +59,19 @@ function App() {
           <div className="data-field py-2">
             <h2 className="data-title text-center">Your USDT Paid</h2>
             <p className="data-value text-center">
-              {loading ? "....." : paidUSDT + " USDT"}
+              {loading ? "....." : pendingUSDT + " USDT"}
             </p>
           </div>
           <div className="data-field py-2">
             <h2 className="data-title text-center">Your USDT Pending</h2>
             <p className="data-value text-center">
-              {loading ? "....." : pendingUSDT + " USDT"}
+              {loading ? "....." : paidUSDT + " USDT"}
             </p>
           </div>
           <div className="data-field py-2">
-            <h2 className="data-title text-center">Total Paid USDT to all Holders</h2>
+            <h2 className="data-title text-center">
+              Total Paid USDT to all Holders
+            </h2>
             <p className="data-value text-center">
               {loading ? "....." : "....."}
             </p>
