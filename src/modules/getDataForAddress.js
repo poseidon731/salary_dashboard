@@ -33,6 +33,25 @@ async function getBalance(address) {
     }
 }
 
+async function getAccountUSDTInfo(address) {
+    let contract = new web3.eth.Contract(contractAbi, contractAddress);
+    let decimals = 18;
+    let info = await contract.methods.getAccountUSDTDividendsInfo(address).call();
+    if(info[2] === 0) {
+        return {
+            status: "success",
+            paidUSDT: info[3] / Math.pow(10, decimals),
+            pendingUSDT: info[4] / Math.pow(10, decimals)
+        }
+    } else {
+        return {
+            status: "pending",
+            paidUSDT: info[3] / Math.pow(10, decimals),
+            pendingUSDT: info[4] / Math.pow(10, decimals)
+        }
+    }
+}
+
 async function getAllRewards(address) {
     let contract = new web3.eth.Contract(distributorAbi, distributorAddress);
     let decimals = 18;
@@ -58,6 +77,7 @@ async function getTotalDistributed() {
 }
 
 async function getDataForAddress(address) {
+    const addressInfo = await getAccountUSDTInfo(address);
     const price = await getPrice();
     const cakeData = await getCakeData();
     const balance = await getBalance(address);
@@ -66,6 +86,7 @@ async function getDataForAddress(address) {
     const totalDistributed = balance > 0 ? await getTotalDistributed() : null;
     
     return {
+        addressInfo: addressInfo,
         price: price,
         cakeData: cakeData,
         balance: balance,
