@@ -1,0 +1,69 @@
+@font-face {
+  font-family: MarlinGeoSQ;
+  src: url(./assets/font/marlin-geo-sq/MarlinGeoSQSlant-ExtraBold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: MarlinGeoSQ;
+  src: url(./assets/font/marlin-geo-sq/MarlinGeoSQSlant-Bold.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: MarlinGeoSQ;
+  src: url(./assets/font/marlin-geo-sq/MarlinGeoSQSlant-Medium.ttf);
+  font-weight: 350;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: MarlinGeoSQ;
+  src: url(./assets/font/marlin-geo-sq/MarlinGeoSQSlant-Regular.ttf);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: MarlinGeoSQ;
+  src: url(./assets/font/marlin-geo-sq/MarlinGeoSQSlant-Light.ttf);
+  font-weight: 250;
+  font-style: normal;
+}
+/* 
+@font-face {
+  font-family: FreeSerif;
+  src: url(./assets/font/freeserif/FreeSerif.ttf);
+  font-weight: 350;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: FreeSerif;
+  src: url(./assets/font/freeserif/FreeSerifBold.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: FreeSerif;
+  src: url(./assets/font/freeserif/FreeSerifItalic.ttf);
+  font-weight: 350;
+  font-style: italic;
+} */
+
+body {
+  margin: 0;
+  font-family: MarlinGeoSQ, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 350;
+  font-style: normal;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
