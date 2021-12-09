@@ -1,6 +1,11 @@
+import Web3 from "web3";
 import React, { useEffect, useState } from "react";
 import getDataForAddress from "./modules/getDataForAddress";
+import {provider} from "./modules/config.json"
+import { useSnackbar } from 'notistack';
 import "./App.css";
+
+const web3 = new Web3(provider);
 
 function App() {
   const [address, setAddress] = useState();
@@ -9,7 +14,7 @@ function App() {
   const [pendingUSDT, setPendingUSDT] = useState();
   const [totalPaidUSDT, setTotalPaidUSDT] = useState();
   const [loading, setLoding] = useState(true);
-
+  const { enqueueSnackbar } = useSnackbar();
   const getData = async (address) => {
     const data = await getDataForAddress(address);
     setBalance(data.balance.toFixed(2));
@@ -32,7 +37,12 @@ function App() {
 
   useEffect(() => {
     if (address) {
-      getData(address);
+      if(web3.utils.isAddress(address)) {
+        getData(address);
+      } else {
+        const variant = "error";
+        enqueueSnackbar("Invalid Address", {variant})
+      }
     }
   }, [address]);
 
