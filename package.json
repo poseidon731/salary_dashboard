@@ -1,5 +1,6 @@
 {
   "name": "client",
+  "homepage" : "https://ftp.cryptosalary.net/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
