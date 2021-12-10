@@ -95,7 +95,7 @@ function App() {
                   thousandSeparator={true}
                   value={pendingUSDT}
                   displayType={"text"}
-                  suffix=" SLR"
+                  suffix=" USDT"
                 />
               )}
             </p>
@@ -110,7 +110,7 @@ function App() {
                   thousandSeparator={true}
                   value={paidUSDT}
                   displayType={"text"}
-                  suffix=" SLR"
+                  suffix=" USDT"
                 />
               )}
             </p>
@@ -127,7 +127,7 @@ function App() {
                   thousandSeparator={true}
                   value={totalPaidUSDT}
                   displayType={"text"}
-                  suffix=" SLR"
+                  suffix=" USDT"
                 />
               )}
             </p>
