@@ -9,7 +9,7 @@ import "./App.css";
 const web3 = new Web3(provider);
 
 function App() {
-  const [address, setAddress] = useState('');
+  const [address, setAddress] = useState("");
   const [balance, setBalance] = useState();
   const [paidUSDT, setPaidUSDT] = useState();
   const [pendingUSDT, setPendingUSDT] = useState();
@@ -101,7 +101,7 @@ function App() {
             </p>
           </div>
           <div className="data-field py-2">
-            <h2 className="data-title text-center">Your USDT Pending</h2>
+            <h2 className="data-title text-center">Your USDT (Pending)</h2>
             <p className="data-value text-center">
               {loading ? (
                 "....."
@@ -117,7 +117,7 @@ function App() {
           </div>
           <div className="data-field py-2">
             <h2 className="data-title text-center">
-              Total Paid USDT to all Holders
+              Total USDT Paid (All Holders)
             </h2>
             <p className="data-value text-center">
               {loading ? (
