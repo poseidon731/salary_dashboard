@@ -17,9 +17,27 @@
   border-radius: 3px;
 }
 
-.input-address {
+.input-panel {
   width: 90%;
   max-width: 800px;
+}
+
+.input-btn {
+  white-space: nowrap;
+  border: 1px solid #3cb7b0;
+  font-weight: 500;
+  color: white;
+}
+
+.input-btn:hover {
+  color: #3cb7b0;
+}
+
+.input-btn:focus {
+  box-shadow: none;
+}
+
+.input-address {
   background-color: transparent;
   border: 1px solid #3cb7b0;
   color: white;
